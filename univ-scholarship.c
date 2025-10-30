@@ -37,27 +37,11 @@ void determine_if_qualified() {
 	printf("student amount of extracurricular amount: ");
 	scanf("%d", &extracurricular_amount);
 
-	
 	// test output
 //	printf("student gpa is: %2.f \n", gpa);
 //	printf("student credit hours is: %d \n", credit_hours);
 //	printf("student number of extracurricular is: %d \n", extracurricular_amount); 	
 
-/*
-▪ University Scholarship
-- GPA is 1.5 or lower; however, if GPA is 1.25 and lower, the student automatically qualified
-regardless of credit hours
-- Credit hours are 40 hours
-▪ College Scholarship
-- GPA is 2.0 or lower
-- Credit hours are 30 hours
-- Extracurricular involvement at least 2 activities
-▪ Leadership Scholarship
-- GPA is 2.5 or lower; however, if GPA is higher than 2.5, the student is not qualified in any
-scholarship
-- Credit hours are 20 hours
-- Extracurricular involvement at least 1 activity
-*/
 	//University Scholarship
 	if(gpa <= 1.25) {
 		printf("the student automatically qualifies for University Scholarship\n");

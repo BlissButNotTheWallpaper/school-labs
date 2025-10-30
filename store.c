@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <math.h>
 
-
 /*
 Write a C++ program that will ask the user to input the following:
     • Original price of an item
@@ -56,6 +55,17 @@ void get_user_input() {
 	printf("amount of item sold this month: ");
 	scanf("%d", &user_input.item_amount_sold_this_month);
 }
+float get_total_store_expense(struct UserInput user_input) {
+	float total_store_expense = user_input.rent + user_input.electricity_bill + user_input.water_bill + user_input.merchandise_cost + user_input.employee_salaries;
+	return total_store_expense;	
+}
+
+
+int get_breakeven_quantity() {
+	float total_store_expense = get_total_store_expense(user_input);
+	float item_selling_price = get_item_selling_price(user_input);
+	int breakeven_quantity = total_store_expense / item_selling_price;
+	return ceil(breakeven_quantity);
 
 float get_item_selling_price(struct UserInput user_input) {
 	float markup = user_input.markup_percentage / 100 * user_input.item_original_price; 
