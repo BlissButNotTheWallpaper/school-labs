@@ -10,7 +10,7 @@ void err_handling() {
 		if(std::cin.fail()) {
 			std::cin.clear();
 			std::cin.ignore(1000, '\n');
-			throw "A non integer value encountered";
+			throw "A non integer value encountered ";
 		} else if (number <= 32) {
 			throw number;
 		} else if (number >= 64) {
@@ -21,8 +21,8 @@ void err_handling() {
 			std::cout << number << " is even and greater than 32 and also less than 64\n";
 		}
 	}
-	catch(char *err) {
-		std::cout << "An error occured" << err << "\n";
+	catch(const char *err) {
+		std::cout << "An error occured " << err << "\n";
 	}	
 	catch(int number) {
 		std::cout << "number is less than 32 / greater than 64 / odd \n";
